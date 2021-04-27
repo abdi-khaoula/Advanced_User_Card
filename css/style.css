@@ -1,0 +1,151 @@
+*{
+    --webit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #2eca7f;
+  }
+body{
+    font-family: Open Sans;
+}
+/* Start Header */
+.header{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: relative;
+}
+.photo{
+    padding-left: 20px;
+    padding-right: 15px;
+}
+.photo img{
+    width: 80px;
+    border-radius: 50%;
+    
+}
+.name{
+    line-height: 0.1;
+    color: white;
+}
+.name h3{
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+}
+.follow-me{
+    position: absolute;
+    right: 20px;
+    color: white;
+    line-height: 0.5;
+}
+.icon a i{
+    color:white;
+    padding-right: 15px;
+}
+/* End Header */
+/* Start Container */
+
+.container{
+    display: grid;
+    grid-template-columns: 15% 50% 35% ;
+    grid-template-rows: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+/* Start Nav */
+.container .nav{
+    grid-column: 1/2;
+    padding: 35px;
+    border-right: 1px solid #eee;
+}
+.nav button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    padding-bottom: 45px;
+}
+.nav button span{
+    padding-left: 10px;
+}
+.nav button a{
+    text-decoration: none;
+}
+.nav button:focus{
+    outline: none;
+}
+.nav button:hover a{
+    color: var(--main-color);
+} 
+.nav a{
+    color:#343a40;
+}
+.gauche{
+    position: absolute;
+    background-color: var(--main-color);
+    width: 30px;
+    height: 2px;
+    left: -35px;
+    top: 12.5%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.nav button:hover .gauche{
+    opacity: 1;
+}
+/* End Nav */
+.container .image img{
+    grid-column: 2/3;
+    width: 100%;
+    
+}
+.container .who{
+    grid-column: 3/4;
+    padding-right: 20px;
+    color: #343a40;
+    line-height: 20px;
+    font-size: 14px;
+}
+.who h2{
+    font-size: 2.1em;
+}
+div .ligne{
+    width: 60px;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    position: relative;
+    margin-top: -18px;
+}
+div .ligne::before{
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    background-color: var(--main-color);
+    transform: translateY(-50%);
+}
+.who p span{
+    font-weight: bold;
+}
+.who button{
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 10px;
+    color:white;
+}
+.who button p{
+    display: inline;
+}
+.who button:focus{
+    outline-color: #0f814a;
+}
+.who button:hover{
+    cursor: pointer;
+}
+/* End Container */
